@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="apply.css">
+    <script>
+        function validate() {
+          var x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+          var y = document.forms["myForm"]["Email"].value;
+          if(y == ""){
+              alert("email must be filled out");
+            return false;
+    
+          }
+          var z = document.forms["myForm"]["zip"].value;
+          if(z == ""){
+            alert("zip must be filled out");
+            return false;
+          }
+          var z = document.forms["myForm"]["country"].value;
+          if(z == ""){
+            alert("country must be filled out");
+            return false;
+          }
+          var z = document.forms["myForm"]["address"].value;
+          if(z == ""){
+            alert("address must be filled out");
+            return false;
+          }
+          var z = document.forms["myForm"]["resume"].value;
+          if(z == ""){
+            alert("resume must be filled out");
+            return false;
+          }
+ }
+ function employee(emp) {
+        var emp2 = document.getElementById("empl");
+        emp2.style.display = emp.checked ? "block": "none";
+    }
+    </script>
+</head>
+<body style="background-image: url('job3.jpg');background-position:left;background-size:cover;height: 100vh">
+   <h1 style="text-align: center;">Apply For Job</h1>
+    <form name="myForm" action="submit.html" onsubmit="return validate()" method="post">
+    <label for="fname"><b></b>First name</b></label>
+<input type="text" id="fname" name="fname">
+<label for="lname"><b>Last name</b></label>
+<input type="text" id="lname"name="lname"><br><br>
+<label for="email">Email:</label>
+<input type="text" id="email" name="Email"><br><br>
+<label for="phnum">Phone number:</label>
+<input type="number" id="phnum" name="phnum"><br><br>
+<label for="address">Address:</label>
+<input type="text" id="address" name="address"><br><br>
+<label for="city">City:</label>
+<input type="text" id="city" name="city"><br><br>
+<label for="state">State:</label>
+<input type="text" id="state" name="state"><br><br>
+<label for="zip">Zip Code</label>
+<input type="number" id="zip" name="Zip"><br><br>
+<label for="country">Country</label>
+<select id="country" name="Country">
+    <option value="india">India</option>
+    <option value="china">China</option>
+    <option value="nepal">Nepal</option>
+    <option value="usa">USA</option>
+    <option value="austrlia">Australia</option>
+    <option value="uk">UK</option>
+    </select><br><br>
+    <label for="education">Education Level</label>
+    <select id="education" name="education">
+        <option value="under graduation">Under Graduation(UG)</option>
+        <option value="post gradution">Post Graduation(PG)</option>
+        <option value="intermediate level">Intermediate Level</option>
+        <option value="intermediate level">Primary level</option>
+ </select><br><br>
+ <label for="education">Education Type </label>
+    <select id="education" name="education">
+        <option value="degree">Degree</option>
+        <option value="btech">Btech</option>
+        <option value="mtech">Mtech</option>
+        <option value="mcom">Mcom</option>
+        <option value="mba">MBA</option>
+        <option value="mca">MCA</option>
+ </select><br><br>
+ <label for="resume">Resume:</label>
+ <input type="file" id="resume" name="resume"><br><br>
+ <label for="cover leter">Cover Letter</label>
+ <textarea id="cover letter" name="cover letter" rows="4" cols="50"></textarea><br><br>
+ <label for="emp">
+  <input type="checkbox" id="emp" onclick="employee(this)" />
+  Are you working ?<br><br>
+</label>
+<div id="empl" style="display: none">
+  <label for="exp" >EXPERIENCE:</label>
+   <input type="number" name="exp" id="exp"><br><br>
+   <label for="exp" >Designation:</label>
+  <input type="text" ><br><br>  
+</div>
+ <label for="job type">Job You Want To Apply</label>
+<select id="job type" name="job type" multiple>
+    <option value="online job">Online Job</option>
+    <option value="government job">Government Job</option>China></option>
+    <option value="railway job">Railway Job</option>
+    <option value="bank job"> Bank JOB</option>
+    <option value="Pofessor">Professor</option>
+    <option value="telecomunication jobs">Telecomunication Jobs</option>
+    </select><br><br>
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>
